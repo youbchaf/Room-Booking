@@ -25,5 +25,6 @@ import { RoomsService } from './rooms/rooms.service';
     ),RoomsModule],
   controllers: [AppController],
   providers: [AppService,RoomsService],
+  //ss
 })
 export class AppModule {}
