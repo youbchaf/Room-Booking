@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { Room, RoomSchema } from './rooms/room.schema';
 import { RoomsModule } from './rooms/rooms.module';
 import { RoomsService } from './rooms/rooms.service';
+import { ReservationsModule } from './reservations/reservations.module';
 
 @Module({
   imports: [
@@ -22,7 +23,7 @@ import { RoomsService } from './rooms/rooms.service';
     MongooseModule.forFeature([{ name: Room.name, schema: RoomSchema }]),
     MongooseModule.forRoot(
       'mongodb://localhost:27017/rooms'
-    ),RoomsModule],
+    ),RoomsModule, ReservationsModule],
   controllers: [AppController],
   providers: [AppService,RoomsService],
   //ss
